@@ -1,0 +1,17 @@
+{
+  "referral": {
+    "id": "REF-FHIR-002",
+    "patient_ref": "P-FHIR-002^^^HIS_A",
+    "upstream_institution": "hospital_a",
+    "diagnosis_initial": "headache"
+  },
+  "modification": {
+    "version": 1,
+    "timestamp": "2026-10-10T09:00:00Z"
+  },
+  "before": {},
+  "after": {
+    "diagnosis": "migraine suspected"
+  },
+  "_comment": "missing 'modification.actor' — fhir_map must reject with MissingField(\"modification.actor\")"
+}

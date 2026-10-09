@@ -1,0 +1,20 @@
+{
+  "referral": {
+    "id": "REF-FHIR-001",
+    "patient_ref": "P-FHIR-001^^^HIS_A",
+    "upstream_institution": "hospital_a",
+    "diagnosis_initial": "chest pain"
+  },
+  "modification": {
+    "version": 1,
+    "timestamp": "2026-10-10T08:30:00Z",
+    "actor": "dr_li@hospital_b"
+  },
+  "before": {},
+  "after": {
+    "diagnosis": "ACS suspected",
+    "bp_systolic": "162",
+    "spo2": "94"
+  },
+  "snapshot_generated_at": "2026-10-10T08:30:01Z"
+}

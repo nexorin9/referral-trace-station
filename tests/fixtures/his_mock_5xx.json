@@ -1,0 +1,6 @@
+{
+  "error": "service unavailable",
+  "status_code": 503,
+  "detail": "HIS 临时不可用 — caller 应 fallback 到 inbox drop 路径",
+  "timestamp": "2026-10-10T08:31:00Z"
+}

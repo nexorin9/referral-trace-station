@@ -1,0 +1,20 @@
+ref: REF-1 | versions: 5                  fsck holes: 1                             AI: on | cl_id: 1
+┌ Timeline (cl_id desc) ───────────┐[+] actor: dr_step1@hospital_a                  ┌ Metadata ────────────────────────┐
+│> v6 cl_id=6 actor=dr_step6@hospit│[~] diagnosis: chest pain → diagnosis_step1     │referral_id: REF (cl_id=1)        │
+│  v5 cl_id=5 actor=dr_step5@hospit│                                                │actor: dr_step1@hospital_a        │
+│  v3 cl_id=3 actor=dr_step3@hospit│                                                │modified_at: 2026-10-10T08:30:01Z │
+│  v2 cl_id=2 actor=dr_step2@hospit│                                                │payload_sha256: 0x5cf0037f3056... │
+│  v1 cl_id=1 actor=dr_step1@hospit│                                                │continuity: manifest              │
+│                                  │                                                │diagnosis_initial: diagnosis_step1│
+│                                  │                                                │                                  │
+│                                  │                                                │                                  │
+│                                  │                                                │                                  │
+│                                  │                                                │                                  │
+│                                  │┌ AI summary (tab to show) ────────────────────┐│                                  │
+│                                  ││(hidden — press tab to show)                  ││                                  │
+│                                  ││                                              ││                                  │
+│                                  ││                                              ││                                  │
+│                                  ││                                              ││                                  │
+│                                  ││                                              ││                                  │
+│                                  ││                                              ││                                  │
+└──────────────────────────────────┘└──────────────────────────────────────────────┘└──────────────────────────────────┘

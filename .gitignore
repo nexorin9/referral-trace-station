@@ -1,0 +1,23 @@
+# Runtime & build artifacts
+target/
+*.log
+logs/*.log
+state/
+inbox/unparsed/
+*.tmp
+*.temp
+__pycache__/
+.cache/
+
+# IDE / tooling
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Secrets & local config
+.env
+.env.local
+
+# Round metadata（不进项目仓）
+score.json

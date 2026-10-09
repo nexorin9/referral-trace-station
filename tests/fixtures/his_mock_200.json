@@ -1,0 +1,15 @@
+{
+  "referral": {
+    "id": "REF-200",
+    "patient_ref": "P-200^^^HIS_A",
+    "upstream_institution": "hospital_a",
+    "diagnosis_initial": "chest pain",
+    "created_at": "2026-10-10T08:00:00Z"
+  },
+  "modification": {
+    "version": 1,
+    "timestamp": "2026-10-10T08:30:00Z",
+    "actor": "dr_li@hospital_b"
+  },
+  "snapshot_generated_at": "2026-10-10T08:30:01Z"
+}

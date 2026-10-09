@@ -1,0 +1,24 @@
+=== export referral_001 → bundle.zip 终端输出 (真实产物) ===
+$ cargo run --quiet -- export --referral referral_001 --out /tmp/bundle.zip --state-dir ./state
+
+export referral_001 : links=5 out=/tmp/bundle.zip chain_ok=true recovery_point_required=false
+[exit_code=0]
+
+=== unzip -l /tmp/bundle.zip 列表（真实归档条目） ===
+$ unzip -l /tmp/bundle.zip
+
+Archive:  /tmp/bundle.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+      316  01-01-1980 00:00   versions/1.json
+      316  01-01-1980 00:00   versions/2.json
+      316  01-01-1980 00:00   versions/3.json
+      316  01-01-1980 00:00   versions/4.json
+      316  01-01-1980 00:00   versions/5.json
+      531  01-01-1980 00:00   chain.txt
+      257  01-01-1980 00:00   manifest.json
+---------                     -------
+     2368                     7 files
+
+=== unzip -p /tmp/bundle.zip manifest.json（脱敏片段） ===
+{"chain_head_hash":"6259a5bdd31e7089bbbf6ff84182b328a8424c7b856179ccb7338c5b0b058113","created_at":"2026-10-09T21:25:18.846622Z","referral_id":"referral_001","time_range":{"earliest":"2026-10-10T08:30:00Z","latest":"2026-10-10T08:30:04Z"},"version_count":5}

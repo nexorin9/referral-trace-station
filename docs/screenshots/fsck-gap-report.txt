@@ -1,0 +1,18 @@
+=== fsck 序列空洞检测 — referral_003 真实报告 ===
+$ cargo run --example fsck_demo -- --referral referral_003 --state-dir ./state
+
+# fsck report for referral_003
+copper archive: <state_dir>/referral_003.copper
+links observed: 5
+cl_ids observed: [1,2,3,5,6]
+
+summary: missing=1 holes=1 truncated=false
+healthy: false
+
+holes (first_id / last_id / reason):
+  [1] first_id=4 last_id=4  reason=SessionEnded  span=1
+
+Note: 故意在 fixture 链中删去 cl_id=4，fsck 据此报 SessionEnded 空洞。
+
+=== 期望（spec.md §3 验收命令）===
+fsck 应在 cl_id=4 处检测到 SessionEnded 空洞，referral_001/002 应 healthy=true

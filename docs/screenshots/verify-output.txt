@@ -1,0 +1,17 @@
+=== verify /tmp/bundle.zip 真实终端输出（健康链，期望 chain_ok: true, EXIT 0） ===
+$ cargo run --quiet -- verify --zip /tmp/bundle.zip
+
+# referral-trace-station verify report
+# zip: /tmp/bundle.zip
+# verify_version: 1
+referral_id: referral_001
+chain_ok: true
+recovery_point_required: false
+versions: 5 (manifest: 5)
+chain_head_hash:
+  manifest:   6259a5bdd31e7089bbbf6ff84182b328a8424c7b856179ccb7338c5b0b058113
+  recomputed: 6259a5bdd31e7089bbbf6ff84182b328a8424c7b856179ccb7338c5b0b058113
+tamper_locations: 0
+end of report
+verify referral_001 : versions=5 (manifest=5) chain_ok=true tamper_count=0 recovery_point_required=false
+[exit_code=0]

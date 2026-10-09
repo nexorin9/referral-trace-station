@@ -1,0 +1,19 @@
+=== replay referral_001 终端输出 (clean exit 0 期望) ===
+$ cargo run --quiet -- replay --referral referral_001
+
+replay referral_001 : links=5 chain_ok=true recovery_point_required=false
+state_file: ./state/referral_001.copper
+declared_gap_count: 0
+
+[1/5] cl_id=1  2026-10-10T08:30:00Z  dr_step1@hospital_a
+  fields=[actor,diagnosis]  payload=5cf0037f3056  chain=627e2baa2cb8  prev=000000000000  cont=manifest
+[2/5] cl_id=2  2026-10-10T08:30:01Z  dr_step2@hospital_b
+  fields=[actor,diagnosis]  payload=95ac0d5a76df  chain=3f1034c87e56  prev=627e2baa2cb8  cont=manifest
+[3/5] cl_id=3  2026-10-10T08:30:02Z  dr_step3@hospital_a
+  fields=[actor,diagnosis]  payload=2f2679d5cdad  chain=e3aea3c8bc01  prev=3f1034c87e56  cont=manifest
+[4/5] cl_id=4  2026-10-10T08:30:03Z  dr_step4@hospital_b
+  fields=[actor,diagnosis]  payload=aaee7c6fd959  chain=bb7e4b165e04  prev=e3aea3c8bc01  cont=manifest
+[5/5] cl_id=5  2026-10-10T08:30:04Z  dr_step5@hospital_a
+  fields=[actor,diagnosis]  payload=e46d80ec9c21  chain=6259a5bdd31e  prev=bb7e4b165e04  cont=manifest
+
+chain verify: ok

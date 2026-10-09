@@ -1,0 +1,5 @@
+{
+  "slept": "5s",
+  "acknowledged": false,
+  "detail": "mock server 故意延迟 5 秒响应 — 触发 client 端 4000ms timeout → HisError::Network"
+}

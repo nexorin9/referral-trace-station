@@ -1,0 +1,53 @@
+[package]
+name = "referral-trace-station"
+version = "0.1.0"
+edition = "2021"
+description = "跨机构转诊单留痕回放工作台 — task graph + cl_id monotonic + fsck + replay + sha256 chain"
+license = "MIT"
+
+[lib]
+name = "referral_trace_station"
+path = "src/lib.rs"
+
+[[bin]]
+name = "referral-trace-station"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1.38", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+sha2 = "0.10"
+hex = "0.4"
+similar = { version = "2.4", features = ["serde"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+clap = { version = "4.5", features = ["derive"] }
+notify = "6.1"
+notify-debouncer-full = "0.3"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+dotenvy = "0.15"
+zip = { version = "0.6", default-features = false, features = ["deflate"] }
+thiserror = "1.0"
+anyhow = "1.0"
+ratatui = "0.27"
+crossterm = "0.27"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.7", features = ["v4", "serde"] }
+hyper = { version = "1.1", features = ["server", "http1"] }
+hyper-util = { version = "0.1", features = ["full"] }
+http-body-util = "0.1"
+futures = "0.3"
+async-trait = "0.1"
+
+[dev-dependencies]
+tempfile = "3.9"
+tokio = { version = "1.38", features = ["full", "test-util"] }
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[profile.release]
+opt-level = 3
+lto = "thin"
